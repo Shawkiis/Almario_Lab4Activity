@@ -1,0 +1,20 @@
+/* Hide all pages by default, only show the active one */
+.page {
+    display: none;
+}
+.page.active {
+    display: block;
+}
+
+/* Show/hide logic based on authentication state attached to body */
+body.not-authenticated .role-logged-in {
+    display: none !important;
+}
+body.authenticated .role-logged-out {
+    display: none !important;
+}
+
+/* Show/hide logic based on admin role attached to body */
+body:not(.is-admin) .role-admin {
+    display: none !important;
+}
